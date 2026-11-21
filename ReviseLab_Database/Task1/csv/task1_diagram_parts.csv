@@ -1,0 +1,55 @@
+task_id,panel,step_no,label,detail
+A22,Process,1,Collection,Used bottles are put in recycling banks
+A22,Process,2,Transport,A truck takes them to a recycling plant
+A22,Process,3,Sorting,Bottles are sorted by colour
+A22,Process,4,Cleaning,Labels and dirt are washed off
+A22,Process,5,Crushing,Glass is crushed into small pieces
+A22,Process,6,Melting,Pieces are melted with sand at high temperature
+A22,Process,7,Moulding,Liquid glass is shaped into new bottles
+A22,Process,8,Delivery,New bottles go to shops and factories
+A23,Process,1,Eggs,An adult frog lays eggs in water
+A23,Process,2,Tadpole,Tadpoles hatch and breathe through gills
+A23,Process,3,Tadpole with legs,Back legs and then front legs grow
+A23,Process,4,Froglet,The tail becomes shorter; lungs develop
+A23,Process,5,Adult frog,The frog lives on land and in water and lays eggs
+A24,Process,1,Plucking,Young leaves are picked by hand
+A24,Process,2,Withering,Leaves are spread out to lose water
+A24,Process,3,Rolling,Leaves are rolled to break their surface
+A24,Process,4,Oxidation,"Leaves turn dark in warm, humid air"
+A24,Process,5,Drying,Hot air stops oxidation
+A24,Process,6,Sorting,Leaves are graded by size
+A24,Process,7,Packing,Tea is packed and sent to shops
+A25,Process,1,Roof,Rain falls on the roof
+A25,Process,2,Gutter,Water runs into gutters and pipes
+A25,Process,3,Filter,Leaves and dirt are removed
+A25,Process,4,Storage tank,Clean water is stored underground
+A25,Process,5,Pump,A pump sends water into the house
+A25,Process,6,Use,"Water is used for toilets, washing and the garden"
+A26,Before,1,Car park,Large car park in the north
+A26,Before,2,Shops,Row of small shops
+A26,Before,3,Main road,Two-way road through the centre
+A26,Before,4,Bus station,Bus station in the south-west
+A26,Before,5,Park,Small park in the south-east
+A26,After,1,Apartments,Car park replaced by apartments
+A26,After,2,Shopping centre,Shops replaced by a shopping centre
+A26,After,3,Pedestrian street,Road closed to cars
+A26,After,4,Tram stop,Bus station replaced by a tram stop
+A26,After,5,Park,"Park made larger, with a playground"
+A27,Before,1,Classrooms,Main classroom building
+A27,Before,2,Playing field,Large grass field
+A27,Before,3,Car park,Staff car park
+A27,Before,4,Library,Small library
+A27,After,1,Classrooms,Building extended with a new floor
+A27,After,2,Playing field,Field made smaller
+A27,After,3,Sports hall,New sports hall on part of the field
+A27,After,4,Bicycle park,Car park changed to bicycle park
+A27,After,5,Library,Library enlarged into a learning centre
+A28,Before,1,Beach,Long beach on the west coast
+A28,Before,2,Forest,Forest covers the centre
+A28,Before,3,Fishing village,Small village in the east
+A28,After,1,Beach,Beach used for swimming
+A28,After,2,Hotel,Hotel rooms near the beach
+A28,After,3,Restaurant,Restaurant in the centre
+A28,After,4,Footpaths,Paths through the remaining forest
+A28,After,5,Pier,Pier for boats on the east coast
+A28,After,6,Fishing village,Village kept but smaller

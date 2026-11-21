@@ -1,0 +1,242 @@
+task_id,chart_no,series,category,value,unit
+A01,1,16-24,2010,2.5,hours per day
+A01,1,16-24,2015,4.0,hours per day
+A01,1,16-24,2020,5.5,hours per day
+A01,1,16-24,2025,6.0,hours per day
+A01,1,25-44,2010,1.5,hours per day
+A01,1,25-44,2015,2.5,hours per day
+A01,1,25-44,2020,3.5,hours per day
+A01,1,25-44,2025,4.5,hours per day
+A01,1,65+,2010,0.2,hours per day
+A01,1,65+,2015,0.5,hours per day
+A01,1,65+,2020,1.5,hours per day
+A01,1,65+,2025,2.5,hours per day
+A02,1,History Museum,Jan,20,thousand visitors
+A02,1,History Museum,Mar,25,thousand visitors
+A02,1,History Museum,May,35,thousand visitors
+A02,1,History Museum,Jul,60,thousand visitors
+A02,1,History Museum,Sep,30,thousand visitors
+A02,1,History Museum,Nov,22,thousand visitors
+A02,1,Science Museum,Jan,40,thousand visitors
+A02,1,Science Museum,Mar,45,thousand visitors
+A02,1,Science Museum,May,40,thousand visitors
+A02,1,Science Museum,Jul,55,thousand visitors
+A02,1,Science Museum,Sep,45,thousand visitors
+A02,1,Science Museum,Nov,50,thousand visitors
+A02,1,Art Gallery,Jan,15,thousand visitors
+A02,1,Art Gallery,Mar,18,thousand visitors
+A02,1,Art Gallery,May,22,thousand visitors
+A02,1,Art Gallery,Jul,25,thousand visitors
+A02,1,Art Gallery,Sep,20,thousand visitors
+A02,1,Art Gallery,Nov,30,thousand visitors
+A03,1,Coal,2000,120,TWh
+A03,1,Coal,2005,125,TWh
+A03,1,Coal,2010,110,TWh
+A03,1,Coal,2015,90,TWh
+A03,1,Coal,2020,60,TWh
+A03,1,Coal,2025,35,TWh
+A03,1,Gas,2000,40,TWh
+A03,1,Gas,2005,55,TWh
+A03,1,Gas,2010,70,TWh
+A03,1,Gas,2015,80,TWh
+A03,1,Gas,2020,85,TWh
+A03,1,Gas,2025,80,TWh
+A03,1,Solar,2000,0,TWh
+A03,1,Solar,2005,2,TWh
+A03,1,Solar,2010,8,TWh
+A03,1,Solar,2015,25,TWh
+A03,1,Solar,2020,55,TWh
+A03,1,Solar,2025,95,TWh
+A04,1,Eastport,2005,180,thousand dollars
+A04,1,Eastport,2010,210,thousand dollars
+A04,1,Eastport,2015,260,thousand dollars
+A04,1,Eastport,2020,330,thousand dollars
+A04,1,Eastport,2025,410,thousand dollars
+A04,1,Millbrook,2005,150,thousand dollars
+A04,1,Millbrook,2010,145,thousand dollars
+A04,1,Millbrook,2015,160,thousand dollars
+A04,1,Millbrook,2020,175,thousand dollars
+A04,1,Millbrook,2025,190,thousand dollars
+A04,1,Lakeside,2005,220,thousand dollars
+A04,1,Lakeside,2010,200,thousand dollars
+A04,1,Lakeside,2015,230,thousand dollars
+A04,1,Lakeside,2020,290,thousand dollars
+A04,1,Lakeside,2025,300,thousand dollars
+A05,1,Car,2016,78,% of households
+A05,1,Car,2018,76,% of households
+A05,1,Car,2020,73,% of households
+A05,1,Car,2022,70,% of households
+A05,1,Car,2024,66,% of households
+A05,1,Bicycle,2016,45,% of households
+A05,1,Bicycle,2018,47,% of households
+A05,1,Bicycle,2020,55,% of households
+A05,1,Bicycle,2022,52,% of households
+A05,1,Bicycle,2024,50,% of households
+A05,1,Electric scooter,2016,1,% of households
+A05,1,Electric scooter,2018,4,% of households
+A05,1,Electric scooter,2020,10,% of households
+A05,1,Electric scooter,2022,18,% of households
+A05,1,Electric scooter,2024,24,% of households
+A06,1,Men,Sport,4.5,hours per week
+A06,1,Men,Television,9,hours per week
+A06,1,Men,Reading,2,hours per week
+A06,1,Men,Social media,6,hours per week
+A06,1,Men,Gardening,1.5,hours per week
+A06,1,Women,Sport,2.5,hours per week
+A06,1,Women,Television,8,hours per week
+A06,1,Women,Reading,4,hours per week
+A06,1,Women,Social media,7.5,hours per week
+A06,1,Women,Gardening,2,hours per week
+A07,1,2005,Business,85,thousand students
+A07,1,2005,Engineering,60,thousand students
+A07,1,2005,Medicine,30,thousand students
+A07,1,2005,Arts,55,thousand students
+A07,1,2005,Computer science,25,thousand students
+A07,1,2025,Business,110,thousand students
+A07,1,2025,Engineering,70,thousand students
+A07,1,2025,Medicine,45,thousand students
+A07,1,2025,Arts,40,thousand students
+A07,1,2025,Computer science,95,thousand students
+A08,1,Agriculture,Country A,70,% of total water use
+A08,1,Agriculture,Country B,40,% of total water use
+A08,1,Agriculture,Country C,85,% of total water use
+A08,1,Agriculture,Country D,20,% of total water use
+A08,1,Industry,Country A,18,% of total water use
+A08,1,Industry,Country B,45,% of total water use
+A08,1,Industry,Country C,8,% of total water use
+A08,1,Industry,Country D,55,% of total water use
+A08,1,Domestic,Country A,12,% of total water use
+A08,1,Domestic,Country B,15,% of total water use
+A08,1,Domestic,Country C,7,% of total water use
+A08,1,Domestic,Country D,25,% of total water use
+A09,1,2015,Under 18,12,million tickets
+A09,1,2015,18-34,30,million tickets
+A09,1,2015,35-54,18,million tickets
+A09,1,2015,55+,8,million tickets
+A09,1,2025,Under 18,9,million tickets
+A09,1,2025,18-34,21,million tickets
+A09,1,2025,35-54,15,million tickets
+A09,1,2025,55+,11,million tickets
+A10,1,2010,Paper,45,% recycled
+A10,1,2010,Glass,35,% recycled
+A10,1,2010,Plastic,8,% recycled
+A10,1,2010,Metal,30,% recycled
+A10,1,2025,Paper,70,% recycled
+A10,1,2025,Glass,60,% recycled
+A10,1,2025,Plastic,28,% recycled
+A10,1,2025,Metal,65,% recycled
+A11,1,1995,Housing,25,% of spending
+A11,1,1995,Food,35,% of spending
+A11,1,1995,Transport,15,% of spending
+A11,1,1995,Entertainment,10,% of spending
+A11,1,1995,Other,15,% of spending
+A11,2,2025,Housing,38,% of spending
+A11,2,2025,Food,20,% of spending
+A11,2,2025,Transport,17,% of spending
+A11,2,2025,Entertainment,15,% of spending
+A11,2,2025,Other,10,% of spending
+A12,1,2025,Course quality,34,% of students
+A12,1,2025,Cost,22,% of students
+A12,1,2025,Location,15,% of students
+A12,1,2025,Job prospects,21,% of students
+A12,1,2025,Friends or family,8,% of students
+A13,1,2025,Homes,52,% of food waste
+A13,1,2025,Restaurants,18,% of food waste
+A13,1,2025,Shops,14,% of food waste
+A13,1,2025,Farms,11,% of food waste
+A13,1,2025,Schools,5,% of food waste
+A14,1,2005,Car,60,% of employees
+A14,1,2005,Bus,15,% of employees
+A14,1,2005,Train,12,% of employees
+A14,1,2005,Bicycle,5,% of employees
+A14,1,2005,Walking,8,% of employees
+A14,2,2025,Car,38,% of employees
+A14,2,2025,Bus,18,% of employees
+A14,2,2025,Train,20,% of employees
+A14,2,2025,Bicycle,16,% of employees
+A14,2,2025,Walking,8,% of employees
+A15,1,2015,Green Valley,320,thousand visitors
+A15,1,2015,Red Rock,150,thousand visitors
+A15,1,2015,Blue Lake,410,thousand visitors
+A15,1,2015,Pine Hills,90,thousand visitors
+A15,1,2015,Sand Coast,260,thousand visitors
+A15,1,2020,Green Valley,210,thousand visitors
+A15,1,2020,Red Rock,120,thousand visitors
+A15,1,2020,Blue Lake,250,thousand visitors
+A15,1,2020,Pine Hills,110,thousand visitors
+A15,1,2020,Sand Coast,180,thousand visitors
+A15,1,2025,Green Valley,380,thousand visitors
+A15,1,2025,Red Rock,175,thousand visitors
+A15,1,2025,Blue Lake,450,thousand visitors
+A15,1,2025,Pine Hills,160,thousand visitors
+A15,1,2025,Sand Coast,240,thousand visitors
+A16,1,Primary,Country A,3,hours per week
+A16,1,Primary,Country B,5,hours per week
+A16,1,Primary,Country C,2,hours per week
+A16,1,Primary,Country D,6,hours per week
+A16,1,Primary,Country E,4,hours per week
+A16,1,Secondary,Country A,7,hours per week
+A16,1,Secondary,Country B,11,hours per week
+A16,1,Secondary,Country C,6,hours per week
+A16,1,Secondary,Country D,14,hours per week
+A16,1,Secondary,Country E,9,hours per week
+A17,1,2012,16-24,55,% of people
+A17,1,2012,25-44,45,% of people
+A17,1,2012,45-64,25,% of people
+A17,1,2012,65+,5,% of people
+A17,1,2018,16-24,92,% of people
+A17,1,2018,25-44,85,% of people
+A17,1,2018,45-64,60,% of people
+A17,1,2018,65+,25,% of people
+A17,1,2024,16-24,98,% of people
+A17,1,2024,25-44,96,% of people
+A17,1,2024,45-64,85,% of people
+A17,1,2024,65+,62,% of people
+A18,1,Year opened,Eastport,1905,year
+A18,1,Length,Eastport,180,km
+A18,1,Passengers per year,Eastport,1400,million
+A18,1,Year opened,Millbrook,1968,year
+A18,1,Length,Millbrook,45,km
+A18,1,Passengers per year,Millbrook,190,million
+A18,1,Year opened,Lakeside,1931,year
+A18,1,Length,Lakeside,96,km
+A18,1,Passengers per year,Lakeside,620,million
+A18,1,Year opened,Northbridge,2001,year
+A18,1,Length,Northbridge,32,km
+A18,1,Passengers per year,Northbridge,150,million
+A18,1,Year opened,Riverton,1890,year
+A18,1,Length,Riverton,210,km
+A18,1,Passengers per year,Riverton,1900,million
+A19,1,Tourists,2000,0.4,million tourists
+A19,1,Tourists,2005,0.6,million tourists
+A19,1,Tourists,2010,0.9,million tourists
+A19,1,Tourists,2015,1.4,million tourists
+A19,1,Tourists,2020,0.7,million tourists
+A19,1,Tourists,2025,1.8,million tourists
+A19,2,2025,Beaches,40,% of tourists
+A19,2,2025,Hiking,20,% of tourists
+A19,2,2025,Shopping,15,% of tourists
+A19,2,2025,Culture,18,% of tourists
+A19,2,2025,Other,7,% of tourists
+A20,1,Printed books,2010,90,million copies
+A20,1,Printed books,2015,80,million copies
+A20,1,Printed books,2020,70,million copies
+A20,1,Printed books,2025,72,million copies
+A20,1,E-books,2010,5,million copies
+A20,1,E-books,2015,25,million copies
+A20,1,E-books,2020,40,million copies
+A20,1,E-books,2025,45,million copies
+A20,2,2025,Phone,45,% of e-book readers
+A20,2,2025,E-reader,30,% of e-book readers
+A20,2,2025,Tablet,18,% of e-book readers
+A20,2,2025,Computer,7,% of e-book readers
+A21,1,Unemployment rate,2010,8.5,%
+A21,1,Unemployment rate,2013,9.2,%
+A21,1,Unemployment rate,2016,7.0,%
+A21,1,Unemployment rate,2019,5.1,%
+A21,1,Unemployment rate,2022,6.8,%
+A21,1,Unemployment rate,2025,4.6,%
+A21,2,2025,Services,12.5,million jobs
+A21,2,2025,Manufacturing,4.2,million jobs
+A21,2,2025,Agriculture,1.1,million jobs
+A21,2,2025,Technology,2.6,million jobs

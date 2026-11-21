@@ -1,0 +1,33 @@
+- Introduction and Purpose
+  - Target learner: e.g. elementary 1 - 3 math, or middle secondary science
+  - Platform: Android, iPhone
+  - Tools being used
+
+- Educational e-Learning Design Principles and Ideas 
+
+- Functions and Features (UI design and screen capture)
+  Relate functions with Source Code (e.g. Blocks from MIT App Inventor)
+  example:
+  - Animation of start Screen
+  - Login and Register
+  - Reset Password
+  - Create learning tasks
+  - Edit learning tasks
+  - Delete learning tasks
+  - Realtime Database (e.g. CloudDB, Google Firebase, Google Sheet, Web etc.)
+
+- Special Features
+
+- Group Work
+   - Division of labor
+   - Problem encountered
+   - Solution: technical or human related
+
+-  Conclusion
+   - The strength and the weakness of the App
+   - Future enhancement
+   - Learning experience of the group project development
+
+- Short Demo Video of the App (3 min max)
+
+- Q&A
