@@ -1,6 +1,6 @@
-# ReviseLab Canva presentation
+# ReviseLab Canva presentation — historical snapshot
 
-30-slide presentation. See the PPTX beside this file for screenshots, code figures, and the slide layout.
+This text and the PPTX beside it are snapshots from the initial repository upload. Read the [live Canva design](https://www.canva.com/design/DAHbiTsaupo/-0EGqUAW3z29u5YZoE0DTA/edit) for current content and page numbers.
 
 GroupPresentation
 Mobile Applications Design and Development
