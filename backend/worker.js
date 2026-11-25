@@ -329,17 +329,17 @@ Return JSON:
  ]}`;
 
   let out = await ai(env, rulesFor(body), request);
-  let issues = groundedIssues(out.issues, essay, t1);
-  if (issues.length < 2) {
-    out = await ai(env, rulesFor(body), request + "\n\nRecheck that at least two different issues quote the exact wording of this draft.");
-    issues = groundedIssues(out.issues, essay, t1);
+  let scores = readScores(out);
+  if (!scores) {
+    out = await ai(env, rulesFor(body), request + "\n\nInclude a numeric band from 0 to 9 for each of tr, cc, lr, and gra.");
+    scores = readScores(out);
   }
-  if (issues.length < 2) throw httpError(502, "AI did not return enough distinct, grounded writing issues. Try again.");
+  if (!scores) throw httpError(502, "AI did not return a valid band estimate. Try again.");
 
-  const tr = band(out.tr), cc = band(out.cc), lr = band(out.lr), gra = band(out.gra);
-  const overall = band((tr + cc + lr + gra) / 4);
+  const { overall } = scores;
+  const issues = groundedIssues(out.issues, essay, t1);
   return {
-    tr, cc, lr, gra, overall,
+    ...scores,
     range: `${Math.max(0, overall - 0.5).toFixed(1)}-${overall.toFixed(1)}`,
     ...issues[0],
     practice_prompt: str(out.practice_prompt).trim(),
@@ -348,12 +348,21 @@ Return JSON:
   };
 }
 
+function readScores(result) {
+  const values = [result?.tr, result?.cc, result?.lr, result?.gra];
+  if (values.some(value => typeof value !== "number" && (typeof value !== "string" || !value.trim()))) return null;
+  const numbers = values.map(Number);
+  if (!numbers.every(value => value >= 0 && value <= 9)) return null;
+  const [tr, cc, lr, gra] = numbers.map(band);
+  const overall = band((tr + cc + lr + gra) / 4);
+  return overall > 0 ? { tr, cc, lr, gra, overall } : null;
+}
+
 function groundedIssues(items, essay, t1) {
   if (!Array.isArray(items)) return [];
   const blankLines = /\r?\n[ \t]*\r?\n/;
   const paragraphBreak = blankLines.test(essay) ? blankLines : /\r?\n/;
-  const paragraphs = essay.split(paragraphBreak).map(normalizeSpace).filter(Boolean);
-  const draft = normalizeSpace(essay);
+  const paragraphs = essay.split(paragraphBreak).map(paragraph => paragraph.trim()).filter(Boolean);
   const issues = [];
   const seen = new Set();
   for (const issue of items) {
@@ -361,16 +370,19 @@ function groundedIssues(items, essay, t1) {
     const focus = t1 && issue.focus === "TA" ? "TR" : issue.focus;
     if (!Object.hasOwn(LABELS, focus)) continue;
     const quote = str(issue.issue_sentence).trim();
-    const anchor = normalizeSpace(quote);
     const issueWhy = str(issue.issue_why).trim();
     const nextStep = str(issue.next_step).trim();
     const skill = str(issue.practice_skill).trim();
-    if (!anchor || !draft.includes(anchor) || !issueWhy || !nextStep || !skill) continue;
+    if (!quote || !issueWhy || !nextStep || !skill) continue;
 
-    const key = JSON.stringify([focus, anchor]);
+    const pattern = sourceQuotePattern(quote);
+    const position = paragraphs.findIndex(paragraph => pattern.test(paragraph));
+    const sourceQuote = (paragraphs[position] ?? essay).match(pattern)?.[0];
+    if (!sourceQuote) continue;
+
+    const key = JSON.stringify([focus, normalizeSpace(sourceQuote)]);
     if (seen.has(key)) continue;
     seen.add(key);
-    const position = paragraphs.findIndex(paragraph => paragraph.includes(anchor));
     const paragraph = position >= 0 ? position + 1
       : Number.isInteger(issue.issue_paragraph) && issue.issue_paragraph > 0 ? issue.issue_paragraph : 1;
     const focusLabel = focus === "TR" && t1 ? "Task Achievement" : LABELS[focus];
@@ -382,7 +394,7 @@ function groundedIssues(items, essay, t1) {
       issue_title: str(issue.issue_title).trim() || focusLabel,
       focus_reason: str(issue.focus_reason).trim() || issueWhy,
       issue_paragraph: paragraph,
-      issue_sentence: quote,
+      issue_sentence: sourceQuote,
       issue_why: issueWhy,
       next_step: nextStep,
       hints: suggestedHints.length ? suggestedHints : [nextStep],
@@ -391,6 +403,16 @@ function groundedIssues(items, essay, t1) {
     if (issues.length === 4) break;
   }
   return issues;
+}
+
+function sourceQuotePattern(quote) {
+  // Match typographic quote variants and OCR line wrapping while retaining the exact draft excerpt.
+  const escaped = quote.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = escaped.replace(/\s+|['‘’"“”]/g, part => {
+    if (part.trim() === "") return "\\s+";
+    return /['‘’]/.test(part) ? "['‘’]" : '["“”]';
+  });
+  return new RegExp(pattern, "u");
 }
 
 function normalizeSpace(text) {
