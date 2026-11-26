@@ -328,16 +328,26 @@ Return JSON:
    "hints": ["first hint", "more specific hint"], "practice_skill": "transferable skill, max 10 words"}
  ]}`;
 
-  let out = await ai(env, rulesFor(body), request);
+  const rules = rulesFor(body);
+  let out = await ai(env, rules, request);
   let scores = readScores(out);
-  if (!scores) {
-    out = await ai(env, rulesFor(body), request + "\n\nInclude a numeric band from 0 to 9 for each of tr, cc, lr, and gra.");
-    scores = readScores(out);
+  let issues = groundedIssues(out?.issues, essay, t1);
+  if (!scores || !issues.length) {
+    const retry = await ai(env, rules, `${request}
+
+Include a numeric band from 0 to 9 for each of tr, cc, lr, and gra.
+Copy each issue_sentence verbatim as a continuous excerpt from the draft. Keep its original spelling and punctuation.`);
+    scores ??= readScores(retry);
+    const retryIssues = groundedIssues(retry?.issues, essay, t1);
+    if (retryIssues.length) {
+      out = retry;
+      issues = retryIssues;
+    }
   }
   if (!scores) throw httpError(502, "AI did not return a valid band estimate. Try again.");
+  if (!issues.length) throw httpError(502, "AI did not return usable writing feedback. Try again.");
 
   const { overall } = scores;
-  const issues = groundedIssues(out.issues, essay, t1);
   return {
     ...scores,
     range: `${Math.max(0, overall - 0.5).toFixed(1)}-${overall.toFixed(1)}`,
