@@ -2,9 +2,10 @@
 
 ReviseLab is an IELTS Academic Writing practice app available as an MIT App Inventor project and a Node.js web app.
 
+- [Current App Inventor V28](ReviseLab_v28.aia) uses V282 as its base and fixes the five actions on the Revision Result screen.
 - [App Inventor v28 iOS text fix](ReviseLab_v28_ios_text_fixed.aia) includes the scoring fix, sentence replacement preview, and iOS input cleanup.
 - [v282 teammate variant](ReviseLab_v282.aia) adds clearer photo upload errors and retry handling to v28.
-- [Original v28](ReviseLab_v28.aia), [scoring fix](ReviseLab_v28_fixed.aia), and [revision fix](ReviseLab_v28_revision_fixed.aia) are available as individual exports.
+- [Earlier scoring fix](ReviseLab_v28_fixed.aia) and [earlier revision fix](ReviseLab_v28_revision_fixed.aia) are available as individual exports.
 - [Web app](ReviseLab_web/) includes the Task 1 and Task 2 question banks, AI scoring and feedback, targeted practice, and photo, PDF, and Word import.
 - [Cloudflare Worker](backend/worker.js) — scoring, guided revision, targeted practice, tutor, writing plans, hints, and photo OCR.
 - [Task 1 and Task 2 question banks](ReviseLab_Database/) and [archive](ReviseLab_Database.zip).
