@@ -1,0 +1,61 @@
+:root{color-scheme:light;--ink:#17253e;--blue:#234ea4;--muted:#52627a;--line:#d9e1ef;--pale:#eaf1ff;--paper:#fff;--bg:#f4f6fa;font-family:system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--bg)}
+*{box-sizing:border-box}
+body{margin:0;line-height:1.55}
+header{background:var(--paper);border-bottom:1px solid var(--line)}
+.shell{width:min(1080px,calc(100% - 40px));margin:auto}
+.bar,.row,.actions,nav{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.bar{justify-content:space-between;min-height:70px}
+.brand{font-size:1.18rem;font-weight:800;background:none;color:var(--ink);display:flex;align-items:center;gap:.6rem;padding:0;border:0}
+.brand img{width:34px;height:34px;object-fit:contain}
+nav button,.quiet{background:transparent;border-color:transparent;color:var(--blue)}
+main{padding:2.3rem 0 3rem}
+h1,h2,h3,p{margin:0 0 .7rem}
+h1{font-size:clamp(1.85rem,4vw,3rem);line-height:1.1;letter-spacing:-.04em}
+h2{font-size:1.32rem}
+h3{font-size:1.05rem}
+.hero{background:#183667;color:white;border-radius:1.15rem;padding:clamp(1.3rem,5vw,3.5rem);margin-bottom:1rem}
+.hero p{color:#e3edff;max-width:38rem}.hero .primary{background:#fff;color:#183667}
+.eyebrow{font-size:.86rem;font-weight:700;color:var(--blue)}
+.hero .eyebrow{color:#b8d1ff}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:1rem;padding:clamp(1rem,3vw,1.6rem);margin:0 0 1rem;min-width:0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);gap:1rem;align-items:start}
+.equal{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:.75rem;margin:.8rem 0}
+.stat{background:var(--pale);border-radius:.8rem;padding:.8rem;color:#20375e}
+.stat strong{display:block;font-size:1.4rem}
+button,textarea,input,select{font:inherit}
+button{cursor:pointer;min-height:42px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:.65rem;padding:.45rem .85rem;font-weight:650}
+button:hover:not(:disabled){border-color:var(--blue)}
+button:disabled{cursor:default;opacity:.55}
+button.primary,button[aria-pressed=true]{background:var(--blue);color:white;border-color:var(--blue)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #618cef;outline-offset:2px}
+.steps{display:flex;gap:.4rem;flex-wrap:wrap;margin:0 0 1.1rem}
+.steps button{font-size:.9rem}
+.topic-list{max-height:32rem;overflow:auto;display:grid;gap:.45rem;margin-top:.65rem}
+.topic-list button,.issue{width:100%;text-align:left}
+.topic-list small,.issue small{display:block;font-weight:400}
+label{display:block;font-weight:650;margin:.5rem 0}
+textarea,input:not([type=file]),select{width:100%;padding:.65rem;border-radius:.55rem;border:1px solid #b9c8de;background:white;color:var(--ink)}
+textarea{min-height:12rem;resize:vertical}
+textarea.essay{min-height:23rem}
+textarea.chat{min-height:5rem}
+img.chart{max-width:100%;display:block;margin:.7rem auto;max-height:360px;object-fit:contain}
+.chart-button{display:block;width:100%;padding:.4rem}
+.muted,small{color:var(--muted)}
+.pre{white-space:pre-wrap;overflow-wrap:anywhere}
+.actions{margin-top:.85rem}
+.status{margin:.6rem 0;color:var(--blue)}
+.error{color:#a72222}
+.messages{display:grid;gap:.65rem;margin:.8rem 0;max-height:24rem;overflow:auto}
+.bubble{border-radius:.8rem;background:var(--pale);padding:.75rem;margin:0;max-width:88%}
+.student{justify-self:end;background:#e7f4ef}
+blockquote{margin:.7rem 0;padding:.7rem .9rem;border-left:3px solid #91afe8;background:var(--bg)}
+dialog{border:1px solid var(--line);border-radius:1rem;width:min(800px,calc(100% - 30px));max-height:90dvh;color:var(--ink);padding:1rem}
+dialog::backdrop{background:#132341aa}
+dialog form{text-align:right}
+dialog img{max-width:100%}
+.notice{padding:.65rem .9rem;background:#fff1c9;border-radius:.6rem;margin-bottom:1rem}
+.progress-chart{display:flex;gap:1rem;overflow:auto;align-items:end;min-height:10rem;border-bottom:1px solid var(--line);padding:0 .5rem .5rem}
+.progress-bar{display:grid;align-content:end;text-align:center;min-width:3.1rem;height:9rem}
+.progress-bar span{background:#8eaceb;border-radius:.3rem .3rem 0 0}
+@media(max-width:740px){.grid{grid-template-columns:1fr}.shell{width:calc(100% - 24px)}main{padding-top:1.2rem}.topic-list{max-height:15rem}}
