@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plan, write and revise IELTS Task 1 reports and Task 2 essays with ReviseLab.">
+  <meta name="theme-color" content="#f6f8f6">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <title>ReviseLab · IELTS Writing</title>
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+  <aside class="sidebar">
+    <button class="brand" type="button" id="brand">
+      <img src="assets/mark.svg" alt="" width="38" height="38">
+      <span>ReviseLab</span>
+    </button>
+    <nav class="navigation" aria-label="Main navigation">
+      <button id="home" type="button" aria-current="page">Home</button>
+      <button id="topics" type="button">Topic bank</button>
+      <button id="history" type="button">Progress</button>
+    </nav>
+    <div class="sidebar-note" id="sidebar-note">Drafts stored locally</div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="shell topbar-inner">
+      <span class="workspace-label">IELTS Writing</span>
+      <button id="goal-quick" class="goal-quick" type="button" disabled>Set goal</button>
+    </div></header>
+    <main class="shell" id="app" aria-busy="true" tabindex="-1"></main>
+  </div>
+  <dialog id="dialog" aria-labelledby="dialog-title">
+    <form method="dialog"><button class="icon-only" id="dialog-close" aria-label="Close dialog">Close</button></form>
+    <div id="dialog-content"></div>
+  </dialog>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

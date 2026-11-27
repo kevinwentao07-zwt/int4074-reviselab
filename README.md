@@ -1,18 +1,32 @@
 # ReviseLab · INT4074 group project
 
-ReviseLab is an IELTS Academic Writing practice app available as an MIT App Inventor project and a Node.js web app.
+ReviseLab is an IELTS Academic Writing practice app available as an MIT App Inventor project and two web implementations.
 
 - [Current App Inventor V28](ReviseLab_v28.aia) uses V282 as its base, fixes the five Revision Result actions, and restores the score list when fewer than four issues are returned.
 - [App Inventor v28 iOS text fix](ReviseLab_v28_ios_text_fixed.aia) includes the scoring fix, sentence replacement preview, and iOS input cleanup.
 - [v282 teammate variant](ReviseLab_v282.aia) adds clearer photo upload errors and retry handling to v28.
 - [Earlier scoring fix](ReviseLab_v28_fixed.aia) and [earlier revision fix](ReviseLab_v28_revision_fixed.aia) are available as individual exports.
-- [Web app](ReviseLab_web/) includes the Task 1 and Task 2 question banks, AI scoring and feedback, targeted practice, and photo, PDF, and Word import.
+- [ReviseLab Site](ReviseLab_site/) is the current browser interface, with PDF and Word import and a Worker that connects the writing coach.
+- [Node.js web app](ReviseLab_web/) includes the Task 1 and Task 2 question banks, AI scoring and feedback, targeted practice, and photo, PDF, and Word import.
 - [Cloudflare Worker](backend/worker.js) — scoring, guided revision, targeted practice, tutor, writing plans, hints, and photo OCR.
 - [Task 1 and Task 2 question banks](ReviseLab_Database/) and [archive](ReviseLab_Database.zip).
 - [Teacher guidelines](Guidelines/) — assessment requirements, collaboration and peer evaluation forms, presentation outline, template, and example.
 - [Promotional video versions and render script](ReviseLab%20Promo/).
 
-## Running the web app locally
+## Running ReviseLab Site locally
+
+Use Node.js 22.13 or later.
+
+```sh
+cd ReviseLab_site
+npm ci
+npm run build
+npm run dev
+```
+
+Open http://127.0.0.1:8787. Set `REVISELAB_APP_KEY` in the Worker environment to connect the writing coach to the upstream service.
+
+## Running the Node.js web app locally
 
 Use Node.js 22.13 or later.
 
