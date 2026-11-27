@@ -3,15 +3,20 @@
 ReviseLab is an IELTS Academic Writing practice app available as an MIT App Inventor project and two web implementations.
 
 - [Current App Inventor V28](ReviseLab_v28.aia) uses V282 as its base, fixes the five Revision Result actions, and restores the score list when fewer than four issues are returned.
-- [App Inventor v28 iOS text fix](ReviseLab_v28_ios_text_fixed.aia) includes the scoring fix, sentence replacement preview, and iOS input cleanup.
-- [v282 teammate variant](ReviseLab_v282.aia) adds clearer photo upload errors and retry handling to v28.
-- [Earlier scoring fix](ReviseLab_v28_fixed.aia) and [earlier revision fix](ReviseLab_v28_revision_fixed.aia) are available as individual exports.
+- [App Inventor v28 iOS text fix](archive/app-inventor/v28-variants/ReviseLab_v28_ios_text_fixed.aia) includes the scoring fix, sentence replacement preview, and iOS input cleanup.
+- [v282 teammate variant](archive/app-inventor/v28-variants/ReviseLab_v282.aia) adds clearer photo upload errors and retry handling to v28.
+- [Earlier scoring fix](archive/app-inventor/v28-variants/ReviseLab_v28_fixed.aia) and [earlier revision fix](archive/app-inventor/v28-variants/ReviseLab_v28_revision_fixed.aia) are available as individual exports.
 - [ReviseLab Site](ReviseLab_site/) is the current browser interface, with PDF and Word import and a Worker that connects the writing coach.
 - [Node.js web app](ReviseLab_web/) includes the Task 1 and Task 2 question banks, AI scoring and feedback, targeted practice, and photo, PDF, and Word import.
 - [Cloudflare Worker](backend/worker.js) — scoring, guided revision, targeted practice, tutor, writing plans, hints, and photo OCR.
 - [Task 1 and Task 2 question banks](ReviseLab_Database/) and [archive](ReviseLab_Database.zip).
 - [Teacher guidelines](Guidelines/) — assessment requirements, collaboration and peer evaluation forms, presentation outline, template, and example.
 - [Promotional video versions and render script](ReviseLab%20Promo/).
+
+## Version downloads
+
+- [ReviseLab v28 release](https://github.com/kevinwentao07-zwt/int4074-reviselab/releases/tag/v28) includes the current App Inventor project and a source bundle with both web implementations and the backend Worker.
+- [Historical versions release](https://github.com/kevinwentao07-zwt/int4074-reviselab/releases/tag/historical-versions) archives v8–v27, the extra v9 export, and four v28 variants. You can also browse the [historical exports](archive/app-inventor/).
 
 ## Running ReviseLab Site locally
 
